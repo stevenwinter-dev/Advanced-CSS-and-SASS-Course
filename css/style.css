@@ -12,12 +12,18 @@ header {
     height: 90vh;
 }
 
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 .animate-left {
     animation-name: fadeInLeft;
     animation-fill-mode: both;
     animation-duration: 0.8s;
     opacity: 1;
     animation-timing-function: ease-out;
+    text-align: center;
 } 
 
 @keyframes fadeInLeft {
@@ -34,3 +40,11 @@ header {
 
 div:nth-child(even) {background: palegreen}
 div:nth-child(odd) {background: paleturquoise}
+
+.mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+  }
