@@ -6,3 +6,31 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+header {
+    background-color: rebeccapurple;
+    height: 90vh;
+}
+
+.animate-left {
+    animation-name: fadeInLeft;
+    animation-fill-mode: both;
+    animation-duration: 0.8s;
+    opacity: 1;
+    animation-timing-function: ease-out;
+} 
+
+@keyframes fadeInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px,0,0);
+    transform: translate3d(-2000px,0,0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}}
+
+div:nth-child(even) {background: palegreen}
+div:nth-child(odd) {background: paleturquoise}
