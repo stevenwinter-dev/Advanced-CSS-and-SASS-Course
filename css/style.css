@@ -7,44 +7,112 @@ Dark green: #28b485
 
 */
 
-header {
-    background-color: rebeccapurple;
-    height: 90vh;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 80vw;
-    margin: 0 auto;
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
 }
 
-.animate-left {
-    animation-name: fadeInLeft;
-    animation-fill-mode: both;
-    animation-duration: 0.8s;
-    opacity: 1;
-    animation-timing-function: ease-out;
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        /* rgba(33, 147, 176, 0.8),
+        rgba(109, 213, 237, 0.8)),  */
+        /* rgba(170, 75, 107, 0.8),
+        rgba(107, 107, 131, 0.8),
+        rgba(59, 141, 153, 0.8)), */
+        rgba(21, 153, 87, 0.8),
+        rgba(21, 87, 153, 0.8)),
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path:  polygon(0 0,100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo {
+    height: 3.5rem;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-} 
-
-@keyframes fadeInLeft {
-    0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-2000px,0,0);
-    transform: translate3d(-2000px,0,0);
 }
-100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-}}
 
-div:nth-child(even) {background: palegreen}
-div:nth-child(odd) {background: paleturquoise}
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
 
-.mystyle {
-    width: 100%;
-    padding: 25px;
-    background-color: coral;
-    color: white;
-    font-size: 25px;
-  }
+.heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;  
+    
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; 
+     animation-delay: 3s; */
+}
+
+.heading-primary-sub {
+    display: block;  
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;  
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);    
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
