@@ -1,0 +1,22 @@
+{
+  "name": "cssandsasscourse",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenwinter-dev/Advanced-CSS-and-SASS-Course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenwinter-dev/Advanced-CSS-and-SASS-Course/issues"
+  },
+  "homepage": "https://github.com/stevenwinter-dev/Advanced-CSS-and-SASS-Course#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
